@@ -1,0 +1,24 @@
+.footer-links {
+  li {
+    transition: all 0.3s;
+  }
+  li:hover {
+    color: #999;
+  }
+}
+.footer-social {
+  li {
+    transition: all 0.3s;
+  }
+  li:hover {
+    transform: translateY(-3px);
+  }
+}
+.footer-stores {
+  li {
+    transition: all 0.3s;
+  }
+  li:hover {
+    transform: translateY(-3px);
+  }
+}

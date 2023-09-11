@@ -1,0 +1,94 @@
+@use '../../index';
+
+.input-label {
+  width: 15%;
+}
+.input-label p {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+.input {
+  &-container {
+    width: 100%;
+    @extend %JSB;
+    // margin-bottom: 2rem;
+
+    input {
+      @extend %form-input;
+      padding: 1rem 2rem;
+      border: 2px solid #000;
+      &::placeholder {
+        color: #333;
+      }
+    }
+    select {
+      @extend %form-input;
+      border: 2px solid #000;
+      padding-inline: 2rem;
+    }
+
+    // textarea::placeholder {
+    //   color: var(--color-input-placeholder);
+    // }
+  }
+  &-hint {
+    margin-inline-start: 25%;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: #000;
+  }
+}
+
+.input-text-large textarea {
+  height: 15rem;
+  width: 85.5%;
+  border: #000;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  outline: none;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.6rem;
+  resize: none;
+  border: 2px solid #000;
+}
+
+.text-container {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.form-btns {
+  display: flex;
+  width: 40rem;
+
+  margin: auto;
+}
+
+button.form-btn,
+div.form-btn,
+span.form-btn {
+  @extend %JC;
+  background-color: #2a5f9e;
+  border-radius: 5rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 5rem;
+  margin: auto;
+  font-size: 2.2rem;
+
+  box-shadow: var(--shadow-btn-form);
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.input-error {
+  @apply mx-auto mb-[2rem] w-[90%] rounded-[.7rem] bg-red-200 p-2 px-[1rem] font-bold text-red-800;
+}

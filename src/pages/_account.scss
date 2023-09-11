@@ -1,0 +1,46 @@
+@use '../index';
+
+.account {
+  // padding: 5rem 0;
+  font-family: var(--font-family-secondary);
+
+  .container:last-child {
+    // @extend %form-container;
+    // border: 2px solid #22292E;
+  }
+  &__forms {
+    // margin-inline: 4rem;
+  }
+  &__title {
+    // margin-bottom: 2rem;
+    margin-inline: auto;
+    // color: var(--color-main);
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &.container {
+      padding-inline: 3rem;
+      margin-top: 2rem;
+
+      .logout {
+        @extend %JC;
+        font-size: 3rem;
+        background-color: var(--color-main-lighter);
+        // width: 3rem;
+        // height: 4.5rem;
+        padding: 0.8rem 0.5rem;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+    svg {
+      color: #087da7;
+      margin-inline-end: 3rem;
+      // width: 4rem;
+      cursor: pointer;
+      font-size: 3rem;
+    }
+  }
+}

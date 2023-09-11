@@ -1,0 +1,78 @@
+@use "../../index";
+.form {
+  &__container {
+    width: 60rem;
+    border: 3px solid #000;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 3rem;
+    margin-block: 8rem;
+    color: #000;
+
+    .remember {
+      @extend %JSB;
+      margin-bottom: 0.7rem;
+
+      label {
+        @extend %AC;
+        cursor: pointer;
+        // width: 100%;
+        font-size: 1.4rem;
+      }
+      input {
+        // width: ;
+        cursor: pointer;
+        margin-inline-end: 1rem;
+        accent-color: #000;
+      }
+      .signup {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 4rem;
+    font-size: 3rem;
+  }
+  &__input {
+    &-container {
+      padding-inline: 2rem;
+    }
+    &-label {
+      margin-inline-start: 3rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+  }
+  &-hint {
+    font-size: 1.6rem;
+    line-height: 18px;
+  }
+   &-profile {
+    z-index: 1;
+    position: relative;
+    border: 3px solid #087DA7;
+    border-radius: 1rem;
+    padding: 8rem 4rem 2rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    &__title {
+      @extend %JC;
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      height: 5rem;
+      width: 25rem;
+      border-radius: 1rem 0;
+      font-size: 2.2rem;
+      background-color: #087DA7;
+      color: #fff;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      z-index: 9;
+    }
+  }
+}
